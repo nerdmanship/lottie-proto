@@ -3,27 +3,25 @@
 <head>
     <style>
         body, html{
-            background-color:#555;
+            background-color:#112;
             margin: 0px;
             height: 100%;
             overflow-x: hidden;
             overflow-y: auto;
         }
-
-        p, a {
-            position: relative;
-            font: 16px sans-serif;
-            color: #ddd;
-            top: 200px;
-            padding: 40px;
+        #content {
+          font: 16px sans-serif;
+          color: #ddd;
+          padding: 40px;
+          max-width: 1000px;
+          top: 200px;
+          position: relative;
         }
 
         a {
           color: #33aaff;
         }
-        #content {
-          max-width: 600px;
-        }
+
 
         .bm-anim{
             position: absolute;
@@ -60,18 +58,20 @@
      <script src="bodymovin.js"></script>
 </head>
 <body>
-  <div id="content">
     <div id="vanilla" class='bm-anim'></div>
     <div id="one" class='bm-anim'></div>
     <div id="two" class='bm-anim'></div>
     <div id="both" class='bm-anim'></div>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <div id="content">
+    <h1>Prototypes of bodymovin exports to be tested with Lottie player.</h1>
+    
+    <ul>
+      <li><p><strong>Vanilla</strong> - No plugins used. Best chance of working with Lottie.</p></li>
+      <li><p><strong>Joystick</strong> - Utilising Joysticks and Sliders plugin. Very likely to work with Lottie.</p></li>
+      <li><p><strong>Hose</strong> - Utilising Rubberhose 2 plugin</p></li>
+      <li><p><strong>Joystick + Hose</strong> - Utilising both plugins. This is what we want!</p></li>
+    </ul>
     
     <a href="https://www.dropbox.com/sh/ftmc8ks7851qoq6/AAAQTQ3UO2i2ddPUd7xefEpLa?dl=1">Click to download json</a>
 </div>
