@@ -8,27 +8,32 @@
             height: 100%;
             overflow-x: hidden;
             overflow-y: auto;
+            font: 16px sans-serif;
+            color: #ddd;
         }
-        #content {
-          font: 16px sans-serif;
-          color: #ddd;
-          padding: 40px;
-          max-width: 1000px;
-          top: 200px;
-          position: relative;
+        video {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          width: 24%;
         }
 
         a {
           color: #33aaff;
         }
 
+        #content {
+          padding: 40px;
+          max-width: 1000px;
+          position: relative;
+        }
 
+        #bodymovin-wrapper {
+          position: relative;
+        }
         .bm-anim{
-            position: absolute;
-            top:40px;
-            width:25%;
-            height:25%;
-            display:block;
+            width:24%;
+            display:inline-block;
             overflow: hidden;
             transform: translate3d(0,0,0);
             margin: auto;
@@ -49,6 +54,15 @@
             left: 75%;
         }
 
+        #description {
+
+        }
+
+        #results {
+          margin-top: 60px;
+        }
+
+
         .botas_loop_3,.botas_loop_2{
             display:none
         }
@@ -58,23 +72,48 @@
      <script src="bodymovin.js"></script>
 </head>
 <body>
-    <div id="vanilla" class='bm-anim'></div>
-    <div id="one" class='bm-anim'></div>
-    <div id="two" class='bm-anim'></div>
-    <div id="both" class='bm-anim'></div>
-
   <div id="content">
-    <h1>Prototypes of bodymovin exports to be tested with Lottie player.</h1>
+
+    <div id="bodymovin-wrapper">
+      <div id="vanilla" class='bm-anim'></div>
+      <div id="one" class='bm-anim'></div>
+      <div id="two" class='bm-anim'></div>
+      <div id="both" class='bm-anim'></div>
+    </div>
+
     
-    <ul>
-      <li><p><strong>Vanilla</strong> - No plugins used. Best chance of working with Lottie.</p></li>
-      <li><p><strong>Joystick</strong> - Utilising Joysticks and Sliders plugin. Very likely to work with Lottie.</p></li>
-      <li><p><strong>Hose</strong> - Utilising Rubberhose 2 plugin</p></li>
-      <li><p><strong>Joystick + Hose</strong> - Utilising both plugins. This is what we want!</p></li>
-    </ul>
+      <h1>Prototypes of bodymovin exports to be tested with Lottie player.</h1>
+      
+      <ul>
+        <li><p><strong>Vanilla</strong> - No plugins used. Best chance of working with Lottie.</p></li>
+        <li><p><strong>Joystick</strong> - Utilising Joysticks and Sliders plugin. Very likely to work with Lottie.</p></li>
+        <li><p><strong>Hose</strong> - Utilising Rubberhose 2 plugin</p></li>
+        <li><p><strong>Joystick + Hose</strong> - Utilising both plugins. This is what we want!</p></li>
+      </ul>
+      
+      <a href="https://www.dropbox.com/sh/ftmc8ks7851qoq6/AAAQTQ3UO2i2ddPUd7xefEpLa?dl=1">Click to download json</a>
     
-    <a href="https://www.dropbox.com/sh/ftmc8ks7851qoq6/AAAQTQ3UO2i2ddPUd7xefEpLa?dl=1">Click to download json</a>
-</div>
+
+    <div id="results">
+      <h2>Results from Lottie Preview iOS</h2>
+      <video controls loop autoplay>
+        <source src="video/vanilla.mp4" type="video/mp4">
+        Your browser does not support the video tag or mp4 format.
+      </video>
+      <video controls loop autoplay>
+        <source src="video/joystick.mp4" type="video/mp4">
+        Your browser does not support the video tag or mp4 format.
+      </video>
+      <video controls loop autoplay>
+        <source src="video/rubberhose.mp4" type="video/mp4">
+        Your browser does not support the video tag or mp4 format.
+      </video>
+      <video controls loop autoplay>
+        <source src="video/joystick_and_rubberhose.mp4" type="video/mp4">
+        Your browser does not support the video tag or mp4 format.
+      </video>
+    </div>
+  </div>
 <script>
     var vanilla = bodymovin.loadAnimation({
       container: document.getElementById('vanilla'),
