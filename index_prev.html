@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+        body, html{
+            background-color:#112;
+            margin: 0px;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            font: 16px sans-serif;
+            color: #ddd;
+        }
+        video {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          width: 24%;
+        }
+
+        a {
+          color: #33aaff;
+        }
+
+        #content {
+          padding: 40px;
+          max-width: 1000px;
+          position: relative;
+        }
+
+        .bodymovin-wrapper {
+          position: relative;
+        }
+        .bm-anim{
+            width:24%;
+            display:inline-block;
+            overflow: hidden;
+            transform: translate3d(0,0,0);
+            margin: auto;
+        }
+        #vanilla {
+            left: 0%;
+        }
+
+        #one {
+            left: 25%;
+        }
+
+        #two {
+            left: 50%;
+        }
+
+        #both {
+            left: 75%;
+        }
+
+        #description {
+
+        }
+
+        #results {
+          margin-top: 60px;
+        }
+
+
+        .botas_loop_3,.botas_loop_2{
+            display:none
+        }
+
+    </style>
+    <!-- build:js bodymovin.js -->
+     <script src="bodymovin.js"></script>
+</head>
+<body>
+  <div id="content">
+
+    <div class="bodymovin-wrapper">
+      <div id="vanilla" class='bm-anim'></div>
+      <div id="one" class='bm-anim'></div>
+      <div id="two" class='bm-anim'></div>
+      <div id="both" class='bm-anim'></div>
+    </div>
+
+    
+      <h1>Prototypes of bodymovin exports to be tested with Lottie players on iOS and Android.</h1>
+      
+      <ul>
+        <li><p><strong>Vanilla</strong> - No plugins used. Best chance of working with Lottie.</p></li>
+        <li><p><strong>Joystick</strong> - Utilising <a href="http://aescripts.com/joystick-n-sliders/">Joysticks and Sliders</a> plugin.</p></li>
+        <li><p><strong>Hose</strong> - Utilising <a href="http://www.battleaxe.co/rubberhose/">Rubberhose 2</a> plugin</p></li>
+        <li><p><strong>Joystick + Hose</strong> - Utilising both plugins. This is what we want!</p></li>
+      </ul>
+    
+
+    <div id="results">
+      <h2>Results from <a href="https://itunes.apple.com/us/app/lottie-preview/id1231821260">Lottie Preview iOS</a></h2>
+      <video controls loop autoplay>
+        <source src="video/vanilla.mp4" type="video/mp4">
+        Your browser does not support the video tag or mp4 format.
+      </video>
+      <video controls loop autoplay>
+        <source src="video/joystick.mp4" type="video/mp4">
+        Your browser does not support the video tag or mp4 format.
+      </video>
+      <video controls loop autoplay>
+        <source src="video/rubberhose.mp4" type="video/mp4">
+        Your browser does not support the video tag or mp4 format.
+      </video>
+      <video controls loop autoplay>
+        <source src="video/joystick_and_rubberhose.mp4" type="video/mp4">
+        Your browser does not support the video tag or mp4 format.
+      </video>
+    </div>
+    
+    <div class="bodymovin-wrapper">
+      <div id="one_v2" class='bm-anim'></div>
+      <div id="both_v2" class='bm-anim'></div>
+    </div>
+
+  <ul>
+    <li><p><a href="https://www.dropbox.com/sh/ftmc8ks7851qoq6/AAAQTQ3UO2i2ddPUd7xefEpLa?dl=1">Click to download json</a></p></li>
+    <li><p><a href="https://twitter.com/Stromqvist">Nerdmanship on Twitter</a></p></li>
+    <li><p>Comments coming soon...</p></li>
+  </ul>
+    
+  </div>
+
+<script>
+    var vanilla = bodymovin.loadAnimation({
+      container: document.getElementById('vanilla'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'json/vanilla.json'
+    });
+
+    var one = bodymovin.loadAnimation({
+      container: document.getElementById('one'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'json/joysticks.json'
+    });
+
+    var two = bodymovin.loadAnimation({
+      container: document.getElementById('two'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'json/rubberhose.json'
+    });
+
+    var both = bodymovin.loadAnimation({
+      container: document.getElementById('both'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'json/joysticks-and-rubberhose.json'
+    });
+
+    var one_v2 = bodymovin.loadAnimation({
+      container: document.getElementById('one_v2'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'json/joysticks_v2.json'
+    });
+    var both_v2 = bodymovin.loadAnimation({
+      container: document.getElementById('both_v2'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'json/joysticks-and-rubberhose_v2.json'
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+Joystick and rubber v2
+progress - baked keyframes
+Unresolved - Hose > Contents > Style > BaseHose > Arc > Line Halfer start 0% - end 25%
+
+Joystick and rubber v3
+Joystick and rubber v4
+No progress
+
+Joystick and rubber v5
+Changed stroke dash to 200
+Progress, unresolved
+
+Joystick and rubber v6
+Trim multiple shapes: individually
+No progress
+
